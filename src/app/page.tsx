@@ -14,34 +14,15 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="relative w-full h-auto">
+      <div className="relative w-full h-auto flex justify-center">
         {/* Background Banner */}
-        <div className="relative w-[600px] h-[400px] pt-5">
+        <div className="relative w-[1000px] h-[600px] pt-5 overflow-hidden group">
           <Image
-            src="/images/bannerhome.JPG"
+            src="/bannernew.svg"
             alt="Background Banner"
             layout="fill"
             objectFit="cover" // or 'contain' based on your preference
-          />
-        </div>
-
-
-        <div className="absolute inset-0 z-20 flex justify-center items-center">
-          {/* Pagoda and Sun Illustration */}
-          <Image
-            src="/images/pagoda.PNG"
-            alt="Pagoda"
-            width={200}
-            height={200} // Adjust height based on your image's aspect ratio
-            className="absolute left-[25%] -bottom-[15%]"
-          />
-          {/* Bicycle Silhouette */}
-          <Image
-            src="/public/images/bicycle.PNG"
-            alt="Bicycle"
-            width={200}
-            height={200} // Adjust height based on your image's aspect ratio
-            className="absolute right-[25%] -bottom-[15%]"
+            className="transition-transform duration-300 ease-in-out group-hover:scale-110"
           />
         </div>
 
@@ -63,7 +44,7 @@ export default function Home() {
             <p>สายอาร์ต</p>
           </div>
           <div>
-            <Image src="../arrowline.svg" alt="Arrow Line" className="mt-5 md:mt-0" />
+            <Image src="../arrowline.svg" alt="Arrow Line" className="mt-5 md:mt-0" width={20} height={20}/>
           </div>
         </div>
       </div>

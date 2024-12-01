@@ -148,8 +148,8 @@ const CircularMenu = () => {
       ref={menuRef}
       style={{
         position: "relative",
-        width: `${totalSize}px`,
-        height: `${totalSize}px`,
+        width: `100px`,
+        height: `100px`,
         userSelect: "none",
         margin: "auto",
       }}

@@ -35,6 +35,8 @@ const MenuCard = ({ alt, src, isActive, content }: MenuCardProps) => {
           src={src}
           alt={alt}
           className={`w-full h-full object-cover rounded-3xl transition-all ease-out`}
+          width={100}
+          height={100}
           style={{
             transform: isActive ? "scale(1.1)" : "scale(1)", // ขยายรูปเมื่อ Active
           }}
@@ -46,7 +48,7 @@ const MenuCard = ({ alt, src, isActive, content }: MenuCardProps) => {
         <div className="p-4 flex items-start left-0 mt-3">
           {/* เส้นแนวตั้ง */}
           <div className="mr-4">
-            <Image src="/public/line.svg" alt="line" />
+            <Image src="line.svg" alt="line" width={4} height={20}/>
           </div>
           {/* ข้อความ */}
           <p className="text-black text-left text-2xl ">{content}</p>

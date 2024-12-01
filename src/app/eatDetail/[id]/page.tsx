@@ -101,6 +101,8 @@ const DetailPage = () => {
                     src={data?.image || "/default-image.jpg"}
                     alt={data?.name || "No Image"}
                     className="w-[800px] h-[200px] object-cover rounded-lg"
+                    width={100}
+                    height={100}
                 />
             </div>
             <div className="text-balance flex text-center text-lg break-words">
@@ -108,7 +110,7 @@ const DetailPage = () => {
             </div>
 
             <div className="text-xl gap-x-[5%] mt-[15px] ml-[15%] font-bold">
-            {translations[language].menurec}: {data?.recommend}
+                {translations[language].menurec}: {data?.recommend}
             </div>
 
             <div className="flex flex-row gap-x-[5%] mt-[15px] justify-around">
@@ -125,6 +127,8 @@ const DetailPage = () => {
                                 src="/fb-icon.svg"
                                 alt="FB icon"
                                 className="w-[40px] h-[40px] object-cover rounded-lg justify-self-center"
+                                width={100}
+                                height={100}
                             />
                         </a>
 
@@ -133,6 +137,8 @@ const DetailPage = () => {
                                 src="/Instagram.svg"
                                 alt="IG icon"
                                 className="w-[40px] h-[40px] object-cover rounded-lg justify-self-center"
+                                width={100}
+                                height={100}
                             />
                         </a>
 
@@ -141,6 +147,8 @@ const DetailPage = () => {
                                 src="/external-link.svg"
                                 alt="ref-link"
                                 className="w-[32px] h-[32px] object-cover rounded-lg justify-self-center"
+                                width={100}
+                                height={100}
                             />
                             <p>{translations[language].reference}</p>
                         </a>

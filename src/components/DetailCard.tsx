@@ -22,6 +22,8 @@ const DetailCard = ({ alt, src, isActive, content, rating, link }: DetailCardPro
                 src="/star.svg"
                 alt="Filled star"
                 className="w-5 h-5"
+                width={100}
+                height={100}
             />
         ));
     };
@@ -44,6 +46,8 @@ const DetailCard = ({ alt, src, isActive, content, rating, link }: DetailCardPro
                     src={src}
                     alt={alt}
                     className="w-40 h-40 object-cover rounded-md"
+                    width={100}
+                    height={100}
                 />
                 {/* Title */}
                 <h3

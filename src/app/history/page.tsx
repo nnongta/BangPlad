@@ -45,6 +45,8 @@ export default function HistoryPage() {
         <Image
           src="/images/history-page.JPG"
           alt="hispage"
+          width={100}
+          height={100}
           className="w-[300px] sm:w-[450px] h-auto rounded-3xl"
         />
       </div>
@@ -64,6 +66,8 @@ export default function HistoryPage() {
               src="/external-link.svg"
               alt="ref-link"
               className="w-[32px] h-[32px] object-cover rounded-lg text-center justify-self-center text-center"
+              width={100}
+              height={100}
             />
             <p className="text-[10px] sm:text-[12px]">
               {translations[language].reference}
@@ -82,6 +86,8 @@ export default function HistoryPage() {
               src="/external-link.svg"
               alt="ref-link"
               className="w-[32px] h-[32px] object-cover rounded-lg text-center justify-self-center text-center"
+              width={100}
+              height={100}
             />
             <p className="text-[10px] sm:text-[12px]">
               {translations[language].reference}
