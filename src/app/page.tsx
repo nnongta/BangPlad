@@ -16,17 +16,35 @@ export default function Home() {
 
       <div className="relative w-full h-auto">
         {/* Background Banner */}
-        <div className="z-0 flex justify-center items-center">
-          <Image src="/images/bannerhome.JPG" alt="Background Banner" className="w-[600px] h-auto pt-5" />
+        <div className="relative w-[600px] h-[400px] pt-5">
+          <Image
+            src="/images/bannerhome.JPG"
+            alt="Background Banner"
+            layout="fill"
+            objectFit="cover" // or 'contain' based on your preference
+          />
         </div>
 
-        {/* Overlaying Elements */}
+
         <div className="absolute inset-0 z-20 flex justify-center items-center">
           {/* Pagoda and Sun Illustration */}
-          <Image src="/images/pagoda.PNG" alt="Pagoda" className="w-[200px] h-auto absolute left-[25%] -bottom-[15%]" />
+          <Image
+            src="/images/pagoda.PNG"
+            alt="Pagoda"
+            width={200}
+            height={200} // Adjust height based on your image's aspect ratio
+            className="absolute left-[25%] -bottom-[15%]"
+          />
           {/* Bicycle Silhouette */}
-          <Image src="/images/bicycle.png" alt="Bicycle" className="w-[200px] h-auto absolute right-[25%] -bottom-[15%]" />
+          <Image
+            src="/images/bicycle.PNG"
+            alt="Bicycle"
+            width={200}
+            height={200} // Adjust height based on your image's aspect ratio
+            className="absolute right-[25%] -bottom-[15%]"
+          />
         </div>
+
       </div>
 
       {/* Main Content - Use flex to place CircularMenu on the left and content on the right */}

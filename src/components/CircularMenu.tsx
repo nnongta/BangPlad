@@ -105,21 +105,21 @@ const CircularMenu = () => {
     setStartAngle(angle);
     // Remove line: setLastAngle(angle); if not needed
   };
-  
+
   const onDrag = (e: React.MouseEvent | React.TouchEvent) => {
     if (!isDragging) return;
-  
+
     const angle = getAngleFromMouse(
       "touches" in e ? e.touches[0].clientX : e.clientX,
       "touches" in e ? e.touches[0].clientY : e.clientY
     );
-  
+
     const deltaAngle = angle - startAngle;
     setCurrentAngle((prevAngle) => prevAngle + deltaAngle);
     setStartAngle(angle);
     // Remove line: setLastAngle(angle); if not needed
   };
-  
+
 
   const stopDrag = () => {
     setIsDragging(false);
@@ -202,18 +202,21 @@ const CircularMenu = () => {
           fontWeight: "bold",
           cursor: "pointer",
           opacity: 1,
+          overflow: "hidden",
         }}
       >
         <Image
           src="/images/compass.png"
           alt="Center Image"
+          width={centerSize}
+          height={centerSize}
           className="w-[25vw] sm:w-[100vw]"
           style={{
             width: "100%",
             height: "100%",
             objectFit: "cover",
             opacity: 1,
-            pointerEvents: "none", 
+            pointerEvents: "none",
           }}
         />
       </div>

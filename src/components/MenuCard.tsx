@@ -46,7 +46,7 @@ const MenuCard = ({ alt, src, isActive, content }: MenuCardProps) => {
         <div className="p-4 flex items-start left-0 mt-3">
           {/* เส้นแนวตั้ง */}
           <div className="mr-4">
-            <Image src="/line.svg" alt="line" />
+            <Image src="/public/line.svg" alt="line" />
           </div>
           {/* ข้อความ */}
           <p className="text-black text-left text-2xl ">{content}</p>
