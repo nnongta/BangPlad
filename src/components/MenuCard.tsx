@@ -25,7 +25,7 @@ const MenuCard = ({ alt, src, isActive, content }: MenuCardProps) => {
       {/* ข้อความ h2 (แสดงเฉพาะเมื่อ Active) */}
       {isActive && (
         <div className="absolute inset-0 -top-[50px] right-0 z-20 flex items-start justify-end">
-          <h2 className="px-2 py-1 text-6xl font-bold text-brown">{alt}</h2>
+          <h2 className="px-2 py-7 text-2xl font-bold text-brown">{alt}</h2>
         </div>
       )}
 
@@ -51,7 +51,7 @@ const MenuCard = ({ alt, src, isActive, content }: MenuCardProps) => {
             <Image src="line.svg" alt="line" width={4} height={20}/>
           </div>
           {/* ข้อความ */}
-          <p className="text-black text-left text-2xl ">{content}</p>
+          <p className="text-black text-left text-xs ">{content}</p>
         </div>
       )}
     </div>
