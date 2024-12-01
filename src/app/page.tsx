@@ -31,20 +31,20 @@ export default function Home() {
       {/* Main Content - Use flex to place CircularMenu on the left and content on the right */}
       <div className="flex flex-col md:flex-row justify-between items-center pt-[500px] px-[50px] space-y-10 md:space-y-0">
         {/* CircularMenu on the left */}
-        <div className="flex-shrink-0 md:-ml-[25%] w-full md:w-auto">
+        <div className="flex-shrink-0 md:-ml-[25%] w-1/4 md:w-1/8">
           <CircularMenu />
         </div>
 
         {/* Content on the right */}
-        <div className="flex flex-col md:flex-row justify-end text-right text-5xl w-full md:w-auto">
-          <div className="mr-5 space-y-7 md:space-y-5">
+        <div className="flex flex-row md:flex-row justify-end text-right text-xl w-full md:w-auto">
+          <div className="mr-5 space-y-1 md:space-y-1">
             <p>สายบุญ</p>
             <p>สายกิน</p>
             <p>สายชิว</p>
             <p>สายอาร์ต</p>
           </div>
           <div>
-            <Image src="../arrowline.svg" alt="Arrow Line" className="mt-5 md:mt-0" width={20} height={20}/>
+            <Image src="../arrowline.svg" alt="Arrow Line" className="mt-5 md:mt-0" width={7} height={20}/>
           </div>
         </div>
       </div>

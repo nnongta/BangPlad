@@ -210,7 +210,7 @@ const CircularMenu = () => {
           alt="Center Image"
           width={centerSize}
           height={centerSize}
-          className="w-[25vw] sm:w-[100vw]"
+          className="w-[25vw] sm:w-[10vw]"
           style={{
             width: "100%",
             height: "100%",
