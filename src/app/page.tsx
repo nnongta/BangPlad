@@ -48,7 +48,7 @@ export default function Home() {
       </div>
 
       {/* Main Content - Use flex to place CircularMenu on the left and content on the right */}
-      <div className="flex flex-col md:flex-row justify-between items-center pt-[200px] px-[50px] space-y-10 md:space-y-0">
+      <div className="flex flex-col md:flex-row justify-between items-center pt-[150px] px-[50px] space-y-10 md:space-y-0">
         {/* CircularMenu on the left */}
         <div className="flex-shrink-0 w-full md:w-1/2 flex justify-start items-start">
           <div className="relative">
