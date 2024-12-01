@@ -42,7 +42,7 @@ const DetailCard = ({ alt, src, isActive, content, rating, link }: DetailCardPro
                 }`}
         >
             {/* Image Section */}
-            <div className="flex-shrink-0 ml-[25px]">
+            <div className="flex-shrink-0 ml-[10px]">
                 <Image
                     src={src}
                     alt={alt}
@@ -65,7 +65,7 @@ const DetailCard = ({ alt, src, isActive, content, rating, link }: DetailCardPro
                 </h3>
             </div>
             {/* Content Section */}
-            <div className="ml-4 flex-grow inset-x-0 top-0">
+            <div className="-ml-[10px] flex-grow inset-x-0 top-0">
                 {/* Stars displayed vertically */}
                 <div className="flex flex-col pb-24">{renderStars(rating)}</div>
             </div>

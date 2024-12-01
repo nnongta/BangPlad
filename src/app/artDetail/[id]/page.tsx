@@ -107,7 +107,7 @@ const DetailPage = () => {
                 <p>{data?.description}</p>
             </div>
 
-            <div className="flex flex-col lg:flex-col gap-x-[5%] mt-[15px] justify-around">
+            <div className=" lg:flex-col gap-x-[5%] mt-[15px] justify-around">
                 <div className="p-[10px] order-1 lg:order-none">
                     <div className="text-xl">
                         {translations[language].openingHours}: {data?.time}
@@ -137,7 +137,7 @@ const DetailPage = () => {
                         </a>
                     </div>
                 </div>
-                <div className="flex flex-col items-center justify-center border-[2px] border-black rounded-2xl w-[400px] h-[450px] order-2 lg:order-none">
+                <div className="flex flex-col items-center justify-center border-[2px] border-black rounded-2xl w-auto h-[450px] order-2 lg:order-none">
                     <p className="text-[40px] font-bold text-center">{translations[language].travelmap}</p>
                     {data?.maplink ? (
                         <iframe

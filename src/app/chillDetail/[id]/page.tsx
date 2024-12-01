@@ -138,7 +138,7 @@ const DetailPage = () => {
                         </a>
                     </div>
                 </div>
-                <div className="flex flex-col items-center justify-center border-[2px] border-black rounded-2xl w-[400px] h-[450px]">
+                <div className="items-center justify-center border-[2px] border-black rounded-2xl w-auto h-[450px]">
                     <p className="text-[40px] font-bold text-center">{translations[language].travelmap}</p>
                     {data?.maplink ? (
                         <iframe
