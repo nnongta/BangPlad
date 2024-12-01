@@ -91,7 +91,9 @@ const DetailPage = () => {
             />
 
             <div className="text-[30px] text-baseorange">สายอาร์ต</div>
-            <div className="text-[60px] font-bold">{data?.name}</div>
+            <div className="text-[25px] font-bold sm:text-[19px] md:text-[20px] lg:text-[20px]">
+                {data?.name}
+            </div>
             <div className="flex justify-center">
                 <Image
                     src={data?.image || "/default-image.jpg"}
@@ -101,7 +103,7 @@ const DetailPage = () => {
                     height={100}
                 />
             </div>
-            <div className="text-balance flex text-center text-lg">
+            <div className="text-balance flex text-center text-lg  mt-[10px]">
                 <p>{data?.description}</p>
             </div>
 

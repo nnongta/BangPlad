@@ -19,7 +19,7 @@ export default function ArtPage() {
     },
     {
       id: 3,
-      image: "images/art_location/happy.jpg ",
+      image: "images/art_location/happy.jpg",
       name: "Happy normal gallery (plern.everyday)",
       rating: 4,
       link: "/artDetail/03"

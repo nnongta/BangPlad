@@ -37,7 +37,8 @@ const DetailCard = ({ alt, src, isActive, content, rating, link }: DetailCardPro
     return (
         <div
             onClick={handleClick}
-            className={`cursor-pointer flex items-center justify-items-center rounded-lg bg-[#f0f0f0] transition-transform w-60 h-60 ${isActive ? "transform scale-105" : ""
+            className={`cursor-pointer flex items-center justify-items-center rounded-lg bg-[#f0f0f0] transition-transform 
+                w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72${isActive ? "transform scale-105" : ""
                 }`}
         >
             {/* Image Section */}
@@ -45,7 +46,7 @@ const DetailCard = ({ alt, src, isActive, content, rating, link }: DetailCardPro
                 <Image
                     src={src}
                     alt={alt}
-                    className="w-40 h-40 object-cover rounded-md"
+                    className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-cover rounded-md"
                     width={100}
                     height={100}
                 />

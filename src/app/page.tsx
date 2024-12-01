@@ -28,26 +28,44 @@ export default function Home() {
 
       </div>
 
-      {/* Main Content - Use flex to place CircularMenu on the left and content on the right */}
-      <div className="flex flex-col md:flex-row justify-between items-center pt-[500px] px-[50px] space-y-10 md:space-y-0">
-        {/* CircularMenu on the left */}
-        <div className="flex-shrink-0 md:-ml-[25%] w-1/4 md:w-1/8">
-          <CircularMenu />
+      {/* Content on the right */}
+      <div className="flex flex-row justify-end text-right text-xl w-full md:w-auto">
+        <div className="mr-5 space-y-1">
+          <p>สายบุญ</p>
+          <p>สายกิน</p>
+          <p>สายชิว</p>
+          <p>สายอาร์ต</p>
         </div>
-
-        {/* Content on the right */}
-        <div className="flex flex-row md:flex-row justify-end text-right text-xl w-full md:w-auto">
-          <div className="mr-5 space-y-1 md:space-y-1">
-            <p>สายบุญ</p>
-            <p>สายกิน</p>
-            <p>สายชิว</p>
-            <p>สายอาร์ต</p>
-          </div>
-          <div>
-            <Image src="../arrowline.svg" alt="Arrow Line" className="mt-5 md:mt-0" width={7} height={20}/>
-          </div>
+        <div>
+          <Image
+            src="../arrowline.svg"
+            alt="Arrow Line"
+            className="mt-5 md:mt-0"
+            width={7}
+            height={20}
+          />
         </div>
       </div>
+
+      {/* Main Content - Use flex to place CircularMenu on the left and content on the right */}
+      <div className="flex flex-col md:flex-row justify-between items-center pt-[300px] px-[50px] space-y-10 md:space-y-0">
+        {/* CircularMenu on the left */}
+        <div className="flex-shrink-0 w-full md:w-1/2 flex justify-start items-start">
+          <div className="relative">
+            {/* Adjust this div to align CircularMenu in the center */}
+            <div className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:left-1/2 sm:translate-x-[-50%] md:left-1/2 md:translate-x-[-50%]">
+              <CircularMenu />
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+
+
     </div>
   );
 }

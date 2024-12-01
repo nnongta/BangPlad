@@ -1,19 +1,19 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import { useRouter } from "next/navigation"; // Ensure this is the correct import based on your Next.js version;
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import MenuCard from "./MenuCard";
 
 const CircularMenu = () => {
-  const router = useRouter(); // Initialize the router
+  const router = useRouter();
 
   // Set initial sizes for desktop
-  const desktopTotalSize = 800;
-  const desktopRadius = 800;
-  const desktopActiveSize = 500;
-  const desktopInactiveSize = 200;
-  const desktopCenterSize = 850;
+  const desktopTotalSize = 220;
+  const desktopRadius = desktopTotalSize * 2;
+  const desktopActiveSize = desktopTotalSize * 1.25;
+  const desktopInactiveSize = desktopTotalSize * 0.75;
+  const desktopCenterSize = desktopTotalSize;
 
   // State for sizes and responsiveness
   const [totalSize, setTotalSize] = useState(desktopTotalSize);
@@ -25,12 +25,12 @@ const CircularMenu = () => {
   const menuItems = [
     { src: "/images/merit_home.JPG", width: 200, height: 200, alt: "สายบุญ", content: "รวมวัด มัสยิด ศาลเจ้า ที่โดดเด่น", link: "/merit" },
     { src: "/images/eat_home.JPG", width: 200, height: 200, alt: "สายกิน", content: "รวมร้านอาหาร คาเฟ่ ยอดฮิต", link: "/eat" },
-    { src: "/images/chill_home.JPG",width: 200, height: 200, alt: "สายชิว", content: "รวมสถานที่พักผ่อนหย่อนใจ เดินเล่น ช้อปปิ้งชิวๆ", link: "/chill" },
-    { src: "/images/art_home.JPG", width: 200, height: 200,alt: "สายอาร์ต", content: "รวมแหล่งงานศิลป์ ช่างฝีมือ เวิร์คช้อป อาร์ตกลลอรี่", link: "/art" },
+    { src: "/images/chill_home.JPG", width: 200, height: 200, alt: "สายชิว", content: "รวมสถานที่พักผ่อนหย่อนใจ เดินเล่น ช้อปปิ้งชิวๆ", link: "/chill" },
+    { src: "/images/art_home.JPG", width: 200, height: 200, alt: "สายอาร์ต", content: "รวมแหล่งงานศิลป์ ช่างฝีมือ เวิร์คช้อป อาร์ตกลลอรี่", link: "/art" },
     { src: "/images/map.png", width: 200, height: 200, alt: "Map", content: "แผนที่ย่านบางพลัด", link: "/map" },
-    { src: "/images/eat_home.JPG",width: 200, height: 200, alt: "สายกิน", content: "รวมร้านอาหาร คาเฟ่ ยอดฮิต", link: "/eat" },
-    { src: "/images/chill_home.JPG",width: 200, height: 200, alt: "สายชิว", content: "รวมสถานที่พักผ่อนหย่อนใจ เดินเล่น ช้อปปิ้งชิวๆ", link: "/chill" },
-    { src: "/images/art_home.JPG",width: 200, height: 200, alt: "สายอาร์ต", content: "รวมแหล่งงานศิลป์ ช่างฝีมือ เวิร์คช้อป อาร์ตแกลลอรี่", link: "/art" },
+    { src: "/images/eat_home.JPG", width: 200, height: 200, alt: "สายกิน", content: "รวมร้านอาหาร คาเฟ่ ยอดฮิต", link: "/eat" },
+    { src: "/images/chill_home.JPG", width: 200, height: 200, alt: "สายชิว", content: "รวมสถานที่พักผ่อนหย่อนใจ เดินเล่น ช้อปปิ้งชิวๆ", link: "/chill" },
+    { src: "/images/art_home.JPG", width: 200, height: 200, alt: "สายอาร์ต", content: "รวมแหล่งงานศิลป์ ช่างฝีมือ เวิร์คช้อป อาร์ตแกลลอรี่", link: "/art" },
   ];
 
   const [isDragging, setIsDragging] = useState(false);
@@ -59,12 +59,12 @@ const CircularMenu = () => {
     // Adjust sizes on mobile screens
     const handleResize = () => {
       if (window.innerWidth <= 768) {
-        // For mobile, scale down sizes by 3x
-        setTotalSize(desktopTotalSize / 3);
-        setRadius(desktopRadius / 3);
-        setActiveSize(desktopActiveSize / 3);
-        setInactiveSize(desktopInactiveSize / 3);
-        setCenterSize(desktopCenterSize / 3);
+        // For mobile, scale down sizes by 2x
+        setTotalSize(desktopTotalSize / 2); 
+        setRadius(desktopRadius / 2);
+        setActiveSize(desktopActiveSize / 2);
+        setInactiveSize(desktopInactiveSize / 2);
+        setCenterSize(desktopCenterSize / 2);
       } else {
         // Reset to desktop sizes
         setTotalSize(desktopTotalSize);
@@ -103,7 +103,6 @@ const CircularMenu = () => {
       "touches" in e ? e.touches[0].clientY : e.clientY
     );
     setStartAngle(angle);
-    // Remove line: setLastAngle(angle); if not needed
   };
 
   const onDrag = (e: React.MouseEvent | React.TouchEvent) => {
@@ -117,9 +116,7 @@ const CircularMenu = () => {
     const deltaAngle = angle - startAngle;
     setCurrentAngle((prevAngle) => prevAngle + deltaAngle);
     setStartAngle(angle);
-    // Remove line: setLastAngle(angle); if not needed
   };
-
 
   const stopDrag = () => {
     setIsDragging(false);
@@ -139,7 +136,7 @@ const CircularMenu = () => {
 
   const handleCardClick = (link: string) => {
     if (link) {
-      router.push(link); // Navigate to the page specified in the 'link' property
+      router.push(link);
     }
   };
 
@@ -148,8 +145,8 @@ const CircularMenu = () => {
       ref={menuRef}
       style={{
         position: "relative",
-        width: `100px`,
-        height: `100px`,
+        width: `${totalSize}px`,
+        height: `${totalSize}px`,
         userSelect: "none",
         margin: "auto",
       }}

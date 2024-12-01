@@ -91,7 +91,9 @@ const DetailPage = () => {
             />
 
             <div className="text-[30px] text-baseorange">สายอาร์ต</div>
-            <div className="text-[60px] font-bold">{data?.name}</div>
+            <div className="text-[25px] font-bold sm:text-[19px] md:text-[20px] lg:text-[20px]">
+                {data?.name}
+            </div>
             <div className="flex justify-center">
                 <Image
                     src={data?.image || "/default-image.jpg"}
@@ -101,12 +103,12 @@ const DetailPage = () => {
                     height={100}
                 />
             </div>
-            <div className="text-balance flex text-center text-lg">
+            <div className="text-balance flex text-center text-lg  mt-[10px]">
                 <p>{data?.description}</p>
             </div>
 
-            <div className="flex flex-row gap-x-[5%] mt-[15px] justify-around">
-                <div className="p-[10px]">
+            <div className="flex flex-col lg:flex-col gap-x-[5%] mt-[15px] justify-around">
+                <div className="p-[10px] order-1 lg:order-none">
                     <div className="text-xl">
                         {translations[language].openingHours}: {data?.time}
                     </div>
@@ -123,7 +125,6 @@ const DetailPage = () => {
                                 height={100}
                             />
                         </a>
-
                         <a href={data?.ref} target="_blank" rel="noopener noreferrer">
                             <Image
                                 src="/external-link.svg"
@@ -136,7 +137,7 @@ const DetailPage = () => {
                         </a>
                     </div>
                 </div>
-                <div className="flex flex-col items-center justify-center border-[2px] border-black rounded-2xl w-[400px] h-[450px]">
+                <div className="flex flex-col items-center justify-center border-[2px] border-black rounded-2xl w-[400px] h-[450px] order-2 lg:order-none">
                     <p className="text-[40px] font-bold text-center">{translations[language].travelmap}</p>
                     {data?.maplink ? (
                         <iframe
@@ -149,6 +150,7 @@ const DetailPage = () => {
                     )}
                 </div>
             </div>
+
         </div>
     );
 };
