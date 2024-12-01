@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation"; // Ensure this is the correct import based on your Next.js version
 import TempleCard from "./MenuCard";
 import Image from "next/image";
+import MenuCard from "./MenuCard";
 
 const CircularMenu = () => {
   const router = useRouter(); // Initialize the router
@@ -23,14 +24,14 @@ const CircularMenu = () => {
   const [centerSize, setCenterSize] = useState(desktopCenterSize);
 
   const menuItems = [
-    { src: "/images/merit_home.JPG", alt: "สายบุญ", content: "รวมวัด มัสยิด ศาลเจ้า ที่โดดเด่น", link: "/merit" },
-    { src: "/images/eat_home.JPG", alt: "สายกิน", content: "รวมร้านอาหาร คาเฟ่ ยอดฮิต", link: "/eat" },
-    { src: "/images/chill_home.JPG", alt: "สายชิว", content: "รวมสถานที่พักผ่อนหย่อนใจ เดินเล่น ช้อปปิ้งชิวๆ", link: "/chill" },
-    { src: "/images/art_home.JPG", alt: "สายอาร์ต", content: "รวมแหล่งงานศิลป์ ช่างฝีมือ เวิร์คช้อป อาร์ตกลลอรี่", link: "/art" },
-    { src: "/images/map.png", alt: "Map", content: "แผนที่ย่านบางพลัด", link: "/map" },
-    { src: "/images/eat_home.JPG", alt: "สายกิน", content: "รวมร้านอาหาร คาเฟ่ ยอดฮิต", link: "/eat" },
-    { src: "/images/chill_home.JPG", alt: "สายชิว", content: "รวมสถานที่พักผ่อนหย่อนใจ เดินเล่น ช้อปปิ้งชิวๆ", link: "/chill" },
-    { src: "/images/art_home.JPG", alt: "สายอาร์ต", content: "รวมแหล่งงานศิลป์ ช่างฝีมือ เวิร์คช้อป อาร์ตแกลลอรี่", link: "/art" },
+    { src: "/images/merit_home.JPG", width: 200, height: 200, alt: "สายบุญ", content: "รวมวัด มัสยิด ศาลเจ้า ที่โดดเด่น", link: "/merit" },
+    { src: "/images/eat_home.JPG", width: 200, height: 200, alt: "สายกิน", content: "รวมร้านอาหาร คาเฟ่ ยอดฮิต", link: "/eat" },
+    { src: "/images/chill_home.JPG",width: 200, height: 200, alt: "สายชิว", content: "รวมสถานที่พักผ่อนหย่อนใจ เดินเล่น ช้อปปิ้งชิวๆ", link: "/chill" },
+    { src: "/images/art_home.JPG", width: 200, height: 200,alt: "สายอาร์ต", content: "รวมแหล่งงานศิลป์ ช่างฝีมือ เวิร์คช้อป อาร์ตกลลอรี่", link: "/art" },
+    { src: "/images/map.png", width: 200, height: 200, alt: "Map", content: "แผนที่ย่านบางพลัด", link: "/map" },
+    { src: "/images/eat_home.JPG",width: 200, height: 200, alt: "สายกิน", content: "รวมร้านอาหาร คาเฟ่ ยอดฮิต", link: "/eat" },
+    { src: "/images/chill_home.JPG",width: 200, height: 200, alt: "สายชิว", content: "รวมสถานที่พักผ่อนหย่อนใจ เดินเล่น ช้อปปิ้งชิวๆ", link: "/chill" },
+    { src: "/images/art_home.JPG",width: 200, height: 200, alt: "สายอาร์ต", content: "รวมแหล่งงานศิลป์ ช่างฝีมือ เวิร์คช้อป อาร์ตแกลลอรี่", link: "/art" },
   ];
 
   const [isDragging, setIsDragging] = useState(false);
@@ -178,7 +179,7 @@ const CircularMenu = () => {
             }}
             onClick={() => handleCardClick(item.link || "")}
           >
-            <TempleCard
+            <MenuCard
               alt={item.alt}
               src={item.src}
               isActive={item.isActive}
