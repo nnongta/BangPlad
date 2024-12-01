@@ -1,0 +1,143 @@
+[debug] [2024-12-01T12:38:11.181Z] ----------------------------------------------------------------------
+[debug] [2024-12-01T12:38:11.183Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-12-01T12:38:11.183Z] CLI Version:   13.27.0
+[debug] [2024-12-01T12:38:11.183Z] Platform:      win32
+[debug] [2024-12-01T12:38:11.183Z] Node Version:  v20.17.0
+[debug] [2024-12-01T12:38:11.183Z] Time:          Sun Dec 01 2024 19:38:11 GMT+0700 (เวลาอินโดจีน)
+[debug] [2024-12-01T12:38:11.183Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-12-01T12:38:11.244Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-01T12:38:11.245Z] > authorizing via signed-in user (nita290646@gmail.com)
+[debug] [2024-12-01T12:38:11.245Z] [iam] checking project bangplad-5a6fa for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-12-01T12:38:11.247Z] Checked if tokens are valid: true, expires at: 1733058284639
+[debug] [2024-12-01T12:38:11.247Z] Checked if tokens are valid: true, expires at: 1733058284639
+[debug] [2024-12-01T12:38:11.248Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/bangplad-5a6fa:testIamPermissions [none]
+[debug] [2024-12-01T12:38:11.248Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/bangplad-5a6fa:testIamPermissions x-goog-quota-user=projects/bangplad-5a6fa
+[debug] [2024-12-01T12:38:11.248Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bangplad-5a6fa:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-12-01T12:38:12.501Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/bangplad-5a6fa:testIamPermissions 200
+[debug] [2024-12-01T12:38:12.502Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bangplad-5a6fa:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-12-01T12:38:12.503Z] Checked if tokens are valid: true, expires at: 1733058284639
+[debug] [2024-12-01T12:38:12.503Z] Checked if tokens are valid: true, expires at: 1733058284639
+[debug] [2024-12-01T12:38:12.503Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bangplad-5a6fa [none]
+[debug] [2024-12-01T12:38:12.948Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bangplad-5a6fa 200
+[debug] [2024-12-01T12:38:12.949Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bangplad-5a6fa {"projectId":"bangplad-5a6fa","projectNumber":"679454900258","displayName":"BangPlad","name":"projects/bangplad-5a6fa","resources":{"hostingSite":"bangplad-5a6fa"},"state":"ACTIVE","etag":"1_c269b125-558d-4c3f-8819-2ffb13dbbe2d"}
+[debug] [2024-12-01T12:38:15.084Z] defaultcredentials: writing to file C:\Users\User\AppData\Roaming\firebase\nita290646_gmail_com_application_default_credentials.json
+[debug] [2024-12-01T12:38:15.085Z] Checked if tokens are valid: true, expires at: 1733058284639
+[debug] [2024-12-01T12:38:15.085Z] Checked if tokens are valid: true, expires at: 1733058284639
+[debug] [2024-12-01T12:38:15.086Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/bangplad-5a6fa/sites pageToken=&pageSize=10
+[debug] [2024-12-01T12:38:16.046Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/bangplad-5a6fa/sites 200
+[debug] [2024-12-01T12:38:16.046Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/bangplad-5a6fa/sites {"sites":[{"name":"projects/bangplad-5a6fa/sites/bangplad-5a6fa","defaultUrl":"https://bangplad-5a6fa.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-12-01T12:38:16.046Z] Checked if tokens are valid: true, expires at: 1733058284639
+[debug] [2024-12-01T12:38:16.046Z] Checked if tokens are valid: true, expires at: 1733058284639
+[debug] [2024-12-01T12:38:16.046Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/bangplad-5a6fa/sites 
+[debug] [2024-12-01T12:38:16.483Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/bangplad-5a6fa/sites 200
+[debug] [2024-12-01T12:38:16.484Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/bangplad-5a6fa/sites {"sites":[{"name":"projects/bangplad-5a6fa/sites/bangplad-5a6fa","defaultUrl":"https://bangplad-5a6fa.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-12-01T12:38:16.484Z] Checked if tokens are valid: true, expires at: 1733058284639
+[debug] [2024-12-01T12:38:16.484Z] Checked if tokens are valid: true, expires at: 1733058284639
+[debug] [2024-12-01T12:38:16.484Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bangplad-5a6fa/webApps/-/config [none]
+[debug] [2024-12-01T12:38:17.285Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bangplad-5a6fa/webApps/-/config 200
+[debug] [2024-12-01T12:38:17.285Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bangplad-5a6fa/webApps/-/config {"projectId":"bangplad-5a6fa","appId":"1:679454900258:web:98595acfdcc56e567a8a7b","storageBucket":"bangplad-5a6fa.firebasestorage.app","apiKey":"AIzaSyA4Rv7zOBWW1EEvAM6XczBmi7eJFIWpcpA","authDomain":"bangplad-5a6fa.firebaseapp.com","messagingSenderId":"679454900258","measurementId":"G-BWXLM8Y2ZD"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-12-01T12:38:22.592Z] Checked if tokens are valid: true, expires at: 1733058284639
+[debug] [2024-12-01T12:38:22.592Z] Checked if tokens are valid: true, expires at: 1733058284639
+[debug] [2024-12-01T12:38:22.592Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/bangplad-5a6fa/sites/bangplad-5a6fa [none]
+[debug] [2024-12-01T12:38:23.326Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/bangplad-5a6fa/sites/bangplad-5a6fa 200
+[debug] [2024-12-01T12:38:23.326Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/bangplad-5a6fa/sites/bangplad-5a6fa {"name":"projects/bangplad-5a6fa/sites/bangplad-5a6fa","defaultUrl":"https://bangplad-5a6fa.web.app","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 15.0.3
+
+[info]    - Environments: .env.local
+
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Linting and checking validity of types ...
+
+[info] 
+Failed to compile.
+
+[info] 
+./src/app/artDetail/[id]/page.tsx
+89:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+109:29  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+117:29  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/chillDetail/[id]/page.tsx
+89:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+109:29  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+117:29  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/eatDetail/[id]/page.tsx
+93:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+117:29  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+125:29  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+133:29  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/history/page.tsx
+44:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+62:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+80:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/layout.tsx
+20:9  Warning: Custom fonts not added in `pages/_document.js` will only load for a single page. This is discouraged. See: https://nextjs.org/docs/messages/no-page-custom-font  @next/next/no-page-custom-font
+25:9  Warning: Custom fonts not added in `pages/_document.js` will only load for a single page. This is discouraged. See: https://nextjs.org/docs/messages/no-page-custom-font  @next/next/no-page-custom-font
+
+./src/app/meritDetail/[id]/page.tsx
+89:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+109:29  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+117:29  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/ourproject/page.tsx
+4:8  Error: 'LanguageSwitcher' is defined but never used.  @typescript-eslint/no-unused-vars
+6:7  Error: 'translations' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+28:10  Error: 'language' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+28:20  Error: 'setLanguage' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+39:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+58:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+63:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+68:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/app/page.tsx
+19:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+25:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+27:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+47:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/CircularMenu.tsx
+24:21  Error: 'setMenuItems' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+38:10  Error: 'lastAngle' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+206:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/DetailCard.tsx
+19:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+42:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/Footer.tsx
+11:25  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+16:25  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+21:25  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/MapwithIcon.tsx
+28:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+122:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/MenuCard.tsx
+33:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+48:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+48:13  Warning: img elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/building-your-application/configuring/eslint#disabling-rules
+
+[debug] [2024-12-01T12:38:28.818Z] Error: ENOENT: no such file or directory, open 'D:\freelance\bangplad\bangplad\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.

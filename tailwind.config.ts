@@ -11,8 +11,18 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'baseorange': '#DF7E54',
+        'brown': '#4F3C31',
+        'cream': '#FAD59B',
+        'gray': '#D5D0CF',
+        clipPath: {
+          "half-ellipse": "ellipse(100% 50% at 50% 0)",
+        },
+      },
+      fontFamily: {
+        sans: ["Open Sans", "Noto Sans Thai", "sans-serif"],
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-clip-path")],
 } satisfies Config;
