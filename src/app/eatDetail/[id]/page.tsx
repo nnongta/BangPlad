@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { doc, onSnapshot } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -28,40 +28,7 @@ const DetailPage = () => {
     const [error, setError] = useState("");
     const [language, setLanguage] = useState<Language>("th"); // ค่าเริ่มต้นเป็นภาษาไทย
 
-    const fetchData = (id: string, lang: Language) => {
-        setLoading(true);
-        setError("");
-
-        const docId = lang === "th" ? id : `${id}_en`;
-        const docRef = doc(db, "eatDetail", docId);
-
-        // Using onSnapshot to get real-time updates
-        const unsubscribe = onSnapshot(docRef, (docSnap) => {
-            if (docSnap.exists()) {
-                const docData = docSnap.data() as Omit<DetailData, "id">; // Exclude 'id' from type
-                setData({ ...docData, id: docSnap.id }); // Manually set 'id' without duplication
-            } else {
-                setError("Data not found");
-            }
-        });
-
-        // Return unsubscribe function for cleaning up
-        return unsubscribe;
-    };
-
-    useEffect(() => {
-        const id = window.location.pathname.split("/").pop(); // Extract ID from URL
-        if (id) {
-            const unsubscribe = fetchData(id, language); // Fetch data based on language
-
-            // Cleanup on unmount
-            return () => unsubscribe();
-        }
-    }, [language]);
-
-
-    // ออบเจกต์ข้อความแปล
-    const translations = {
+    const translations = useMemo(() => ({
         th: {
             openingHours: "เวลาเปิด-ปิด",
             contact: "เบอร์ติดต่อ",
@@ -74,9 +41,47 @@ const DetailPage = () => {
             contact: "Contact",
             reference: "Reference",
             travelmap: "Map",
-            menurec: "Recommended menu"
+            menurec: "Recommend"
         },
+    }), []);
+
+    // Function to fetch data using onSnapshot (real-time updates)
+    const fetchData = (id: string, lang: Language) => {
+        setLoading(true);
+        setError("");
+
+        const docId = lang === "th" ? id : `${id}_en`;
+        const docRef = doc(db, "eatlDetail", docId);
+
+        // Listen to real-time updates using onSnapshot
+        const unsubscribe = onSnapshot(docRef, (docSnap) => {
+            if (docSnap.exists()) {
+                const docData = docSnap.data() as Omit<DetailData, "id">; // Exclude 'id' from type
+                setData({ ...docData, id: docSnap.id }); // Manually set 'id' without duplication
+                setLoading(false);  // Set loading to false when data is fetched
+            } else {
+                setError("Data not found");
+                setLoading(false);
+            }
+        }, (err) => {
+            console.error(err);
+            setError("Failed to fetch data");
+            setLoading(false);
+        });
+
+        // Return unsubscribe function to stop listening when needed
+        return unsubscribe;
     };
+
+    useEffect(() => {
+        const id = window.location.pathname.split("/").pop(); // Extract ID from URL
+        if (id) {
+            const unsubscribe = fetchData(id, language); // Fetch data based on language
+
+            // Cleanup function to stop listening when the component is unmounted
+            return () => unsubscribe();
+        }
+    }, [language]);
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>{error}</p>;
