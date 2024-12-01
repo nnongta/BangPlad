@@ -37,7 +37,7 @@ export default function Home() {
           />
           {/* Bicycle Silhouette */}
           <Image
-            src="/images/bicycle.PNG"
+            src="/public/images/bicycle.PNG"
             alt="Bicycle"
             width={200}
             height={200} // Adjust height based on your image's aspect ratio

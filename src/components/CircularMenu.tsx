@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import { useRouter } from "next/navigation"; // Ensure this is the correct import based on your Next.js version
-import TempleCard from "./MenuCard";
+import { useRouter } from "next/navigation"; // Ensure this is the correct import based on your Next.js version;
 import Image from "next/image";
 import MenuCard from "./MenuCard";
 
