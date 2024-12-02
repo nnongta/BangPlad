@@ -67,7 +67,7 @@ export default function ArtPage() {
       {/* Header Section */}
       <div className="flex flex-row content-center mt-[30px] justify-center">
         <div className="text-[60px] font-bold mr-[14px]">สายอาร์ต</div>
-        <div className="text-[20px] text-baseorange">
+        <div className="text-xs text-baseorange">
           <p>งานศิลป์ ช่างฝีมือ</p>
           <p>เวิร์คช้อป</p>
           <p>อาร์ตแกลลอรี่</p>  

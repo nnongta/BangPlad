@@ -178,9 +178,9 @@ export default function EatPage() {
   return (
     <div>
       {/* Header Section */}
-      <div className="flex flex-row content-center mt-[30px] justify-center">
+      <div className="flex flex-row content-center mt-[30px] justify-center items-center">
         <div className="text-[60px] font-bold mr-[14px]">สายกิน</div>
-        <div className="text-[20px] text-baseorange">
+        <div className="text-sm text-baseorange">
           <p>รวมร้านอาหาร</p>
           <p>คาเฟ่</p>
           <p>ยอดฮิต</p>  

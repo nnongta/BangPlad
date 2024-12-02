@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Right-to-Left Content */}
-      <div dir="rtl" className="text-8xl text-brown">
+      <div dir="rtl" className="text-5xl text-brown font-semibold">
         <p>
           ย่าน
           <br />
@@ -16,7 +16,7 @@ export default function Home() {
 
       <div className="relative w-full h-auto flex justify-center">
         {/* Background Banner */}
-        <div className="relative w-[250px] h-[150px] pt-5 overflow-hidden group">
+        <div className="relative w-[450px] h-[250px] pt-5 overflow-hidden group">
           <Image
             src="/bannernew.svg"
             alt="Background Banner"

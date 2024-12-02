@@ -52,7 +52,7 @@ const DetailCard = ({ alt, src, isActive, content, rating, link }: DetailCardPro
                 />
                 {/* Title */}
                 <h3
-                    className="text-lg font-bold text-black mt-2 text-ellipsis overflow-hidden whitespace-normal break-words"
+                    className="text-base font-bold text-black mt-2 text-ellipsis overflow-hidden whitespace-normal break-words"
                     style={{
                         width: "10rem",
                         display: "-webkit-box",

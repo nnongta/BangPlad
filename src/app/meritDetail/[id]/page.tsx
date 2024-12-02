@@ -90,7 +90,7 @@ const DetailPage = () => {
                 onLanguageChange={setLanguage} // Update selected language
             />
 
-            <div className="text-[30px] text-baseorange">สายอาร์ต</div>
+            <div className="text-[30px] text-baseorange">สายบุญ</div>
             <div className="text-[25px] font-bold sm:text-[19px] md:text-[20px] lg:text-[20px]">
                 {data?.name}
             </div>

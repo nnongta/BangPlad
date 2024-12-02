@@ -80,9 +80,9 @@ export default function ChillPage() {
   return (
     <div>
       {/* Header Section */}
-      <div className="flex flex-row content-center mt-[30px] justify-center">
+      <div className="flex flex-row content-center mt-[30px] justify-center items-center">
         <div className="text-[60px] font-bold mr-[14px]">สายชิล</div>
-        <div className="text-[20px] text-baseorange">
+        <div className="text-sm text-baseorange alige--center">
           <p>พักผ่อนหย่อนใจ</p>
           <p>เดินเล่น</p>
           <p>ช้อปปิ้งชิวๆ</p>  
