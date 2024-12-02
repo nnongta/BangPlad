@@ -25,11 +25,11 @@ const CircularMenu = () => {
   const menuItems = [
     { src: "/images/merit_home.JPG", width: 200, height: 200, alt: "สายบุญ", content: "รวมวัด มัสยิด ศาลเจ้า ที่โดดเด่น", link: "/merit" },
     { src: "/images/eat_home.JPG", width: 200, height: 200, alt: "สายกิน", content: "รวมร้านอาหาร คาเฟ่ ยอดฮิต", link: "/eat" },
-    { src: "/images/chill_home.JPG", width: 200, height: 200, alt: "สายชิว", content: "รวมสถานที่พักผ่อนหย่อนใจ เดินเล่น ช้อปปิ้งชิวๆ", link: "/chill" },
+    { src: "/images/chill_home.JPG", width: 200, height: 200, alt: "สายชิล", content: "รวมสถานที่พักผ่อนหย่อนใจ เดินเล่น ช้อปปิ้งชิวๆ", link: "/chill" },
     { src: "/images/art_home.JPG", width: 200, height: 200, alt: "สายอาร์ต", content: "รวมแหล่งงานศิลป์ ช่างฝีมือ เวิร์คช้อป อาร์ตกลลอรี่", link: "/art" },
     { src: "/images/map.png", width: 200, height: 200, alt: "Map", content: "แผนที่ย่านบางพลัด", link: "/map" },
     { src: "/images/eat_home.JPG", width: 200, height: 200, alt: "สายกิน", content: "รวมร้านอาหาร คาเฟ่ ยอดฮิต", link: "/eat" },
-    { src: "/images/chill_home.JPG", width: 200, height: 200, alt: "สายชิว", content: "รวมสถานที่พักผ่อนหย่อนใจ เดินเล่น ช้อปปิ้งชิวๆ", link: "/chill" },
+    { src: "/images/chill_home.JPG", width: 200, height: 200, alt: "สายชิล", content: "รวมสถานที่พักผ่อนหย่อนใจ เดินเล่น ช้อปปิ้งชิวๆ", link: "/chill" },
     { src: "/images/art_home.JPG", width: 200, height: 200, alt: "สายอาร์ต", content: "รวมแหล่งงานศิลป์ ช่างฝีมือ เวิร์คช้อป อาร์ตแกลลอรี่", link: "/art" },
   ];
 

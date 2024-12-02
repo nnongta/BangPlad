@@ -33,7 +33,7 @@ export default function Home() {
         <div className="mr-5 space-y-1">
           <p>สายบุญ</p>
           <p>สายกิน</p>
-          <p>สายชิว</p>
+          <p>สายชิล</p>
           <p>สายอาร์ต</p>
         </div>
         <div>

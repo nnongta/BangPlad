@@ -90,7 +90,7 @@ const DetailPage = () => {
                 onLanguageChange={setLanguage} // Update selected language
             />
 
-            <div className="text-[30px] text-baseorange">สายอาร์ต</div>
+            <div className="text-[30px] text-baseorange">สายชิล</div>
             <div className="text-[25px] font-bold sm:text-[19px] md:text-[20px] lg:text-[20px]">
                 {data?.name}
             </div>
@@ -107,7 +107,7 @@ const DetailPage = () => {
                 <p>{data?.description}</p>
             </div>
 
-            <div className="flex flex-row gap-x-[5%] mt-[15px] justify-around">
+            <div className="gap-x-[5%] mt-[15px] justify-around">
                 <div className="p-[10px]">
                     <div className="text-xl">
                         {translations[language].openingHours}: {data?.time}
@@ -138,7 +138,7 @@ const DetailPage = () => {
                         </a>
                     </div>
                 </div>
-                <div className="items-center justify-center border-[2px] border-black rounded-2xl w-auto h-[450px]">
+                <div className="flex flex-col items-center justify-center border-[2px] border-black rounded-2xl w-full h-[450px]">
                     <p className="text-[40px] font-bold text-center">{translations[language].travelmap}</p>
                     {data?.maplink ? (
                         <iframe

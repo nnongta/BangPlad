@@ -107,8 +107,8 @@ const DetailPage = () => {
                 <p>{data?.description}</p>
             </div>
 
-            <div className=" lg:flex-col gap-x-[5%] mt-[15px] justify-around">
-                <div className="p-[10px] order-1 lg:order-none">
+            <div className="gap-x-[5%] mt-[15px] justify-around">
+                <div className="p-[10px]">
                     <div className="text-xl">
                         {translations[language].openingHours}: {data?.time}
                     </div>
@@ -125,6 +125,7 @@ const DetailPage = () => {
                                 height={100}
                             />
                         </a>
+
                         <a href={data?.ref} target="_blank" rel="noopener noreferrer">
                             <Image
                                 src="/external-link.svg"
@@ -137,7 +138,7 @@ const DetailPage = () => {
                         </a>
                     </div>
                 </div>
-                <div className="flex flex-col items-center justify-center border-[2px] border-black rounded-2xl w-auto h-[450px] order-2 lg:order-none">
+                <div className="flex flex-col items-center justify-center border-[2px] border-black rounded-2xl w-full h-[450px]">
                     <p className="text-[40px] font-bold text-center">{translations[language].travelmap}</p>
                     {data?.maplink ? (
                         <iframe

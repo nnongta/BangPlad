@@ -116,7 +116,7 @@ const DetailPage = () => {
                 {translations[language].menurec}: {data?.recommend}
             </div>
 
-            <div className="flex flex-row gap-x-[5%] mt-[15px] justify-around">
+            <div className="gap-x-[5%] mt-[15px] justify-around">
                 <div className="p-[10px]">
                     <div className="text-xl">
                         {translations[language].openingHours}: {data?.time}
@@ -124,7 +124,7 @@ const DetailPage = () => {
                     <div className="text-xl">
                         {translations[language].contact}: {data?.contact}
                     </div>
-                    <div className="justify-around gap-[2%] mt-[15px] sm:justify-start">
+                    <div className="flex flex-row justify-around gap-[2%] mt-[15px]">
                         <a href={data?.social} target="_blank" rel="noopener noreferrer">
                             <Image
                                 src="/fb-icon.svg"
@@ -157,7 +157,7 @@ const DetailPage = () => {
                         </a>
                     </div>
                 </div>
-                <div className="flex flex-col items-center justify-center border-[2px] border-black rounded-2xl w-auto h-[450px] mt-[20px] sm:mt-0">
+                <div className="flex flex-col items-center justify-center border-[2px] border-black rounded-2xl w-full h-[450px]">
                     <p className="text-[40px] font-bold text-center">{translations[language].travelmap}</p>
                     {data?.maplink ? (
                         <iframe
