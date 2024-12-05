@@ -49,6 +49,7 @@ const DetailCard = ({ alt, src, isActive, content, rating, link }: DetailCardPro
                     className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-cover rounded-md"
                     width={100}
                     height={100}
+                    quality={100}
                 />
                 {/* Title */}
                 <h3

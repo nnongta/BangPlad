@@ -98,9 +98,10 @@ const DetailPage = () => {
                 <Image
                     src={data?.image || "/default-image.jpg"}
                     alt={data?.name || "No Image"}
-                    className="w-[800px] h-[200px] object-cover rounded-lg"
-                    width={100}
-                    height={100}
+                    className="w-[800px] h-[200px] object-cover rounded-3xl mx-4"
+                    width={800}
+                    height={200}
+                    quality={100}
                 />
             </div>
             <div className="text-balance flex text-center text-lg  mt-[10px]">
